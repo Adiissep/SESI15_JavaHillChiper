@@ -10,6 +10,8 @@ import java.io.InputStreamReader;
 /**
  *
  * @author ADVANG4C
+ * Adi Sepriyadi 
+ *
  */
 public class Enkripsi_hillchiper {
     static String[] abjad = {"A", "B", "C", "D", "E", "F", "G", "H",
