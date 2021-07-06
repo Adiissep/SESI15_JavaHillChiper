@@ -10,6 +10,8 @@ import java.io.InputStreamReader;
 /**
  *
  * @author ADVANG4C
+ * Adi Sepriyadi TI20E
+ *
  */
 public class Enkripsi_hillchiper {
     static String[] abjad = {"A", "B", "C", "D", "E", "F", "G", "H",
@@ -60,7 +62,6 @@ public class Enkripsi_hillchiper {
         return totalHasilEnkrip;
     }
     static String pisahkanTeks(String text) {
-        //System.out.println(">>> PEMISAH TIAP 2 HURUF <<<");
         String teksnya = text;
         if (teksnya.length() % 2 == 0) {
             teksnya = text;
@@ -71,14 +72,12 @@ public class Enkripsi_hillchiper {
         teks2karakter = new String[teksnya.length() / 2];
         for (int index = 0; index < teks2karakter.length; index++) {
             teks2karakter[index] = teksnya.substring(index * 2, index * 2 + 2);
-            //System.out.println(teks2karakter[index]);
         }
         return teksnya;
     }
 
     static String[][] AbjadKeAngka(String[] text) {
         hasilKonversi = new String[text.length][2];
-        //System.out.println(">>> TRANSFORMASI HURUF KE ANGKA <<<");
         for (int i = 0; i < text.length; i++) {
             String char1 = text[i].substring(0, 1);
             String char2 = text[i].substring(1);
@@ -94,19 +93,14 @@ public class Enkripsi_hillchiper {
 
             if (hasilKonversi[i][0] == null) {
                 hasilKonversi[i][0] = char1;
-
                 if (hasilKonversi[i][1] == null) {
                     hasilKonversi[i][1] = char2;
-
                 }
             }
         }
-
         for (int n = 0; n < hasilKonversi.length; n++) {
             for (int p = 0; p < hasilKonversi[0].length; p++) {
-                //System.out.print(hasilKonversi[n][p] + " ");
             }
-            //System.out.println("");
         }
 
         return hasilKonversi;
@@ -118,20 +112,13 @@ public class Enkripsi_hillchiper {
         int kunciK1B0 = kunci[1][0];
         int kunciK1B1 = kunci[1][1];
         hasilHitungKunci = new String[angka.length][2];
-        //System.out.println(">>> HASIL PERKALIAN KUNCI <<<");
         for (int n = 0; n < angka.length; n++) {
             int konvert = Integer.parseInt(angka[n][0]);
             int konvert1 = Integer.parseInt(angka[n][1]);
             int hasil = (kunciK0B0 * konvert) + (kunciK0B1 * konvert1);
             int hasil1 = (kunciK1B0 * konvert) + (kunciK1B1 * konvert1);
-            
-            //System.out.println(hasil + " " + hasil1);
-            
             hasil = hasil % modulo;
             hasil1 = hasil1 % modulo;
-            
-            
-            //   System.out.println(hasil + " " + hasil1);
 
             if (hasilHitungKunci[n][0] == null) {
                 hasilHitungKunci[n][0] = String.valueOf(hasil);
@@ -140,14 +127,10 @@ public class Enkripsi_hillchiper {
                 }
             }
         }
-
-        //System.out.println(">>> HASIL MODULO 84 <<<");
         
         for (int i = 0; i < hasilHitungKunci.length; i++) {
             for (int j = 0; j < hasilHitungKunci[0].length; j++) {
-                //System.out.print(hasilHitungKunci[i][j] + " ");
             }
-            //System.out.println("");
         }
         return hasilHitungKunci;
     }
@@ -163,7 +146,6 @@ public class Enkripsi_hillchiper {
         totalHasilEnkrip = "";
         for (int i = 0; i < hasilHitungKunci.length; i++) {
             for (int j = 0; j < hasilHitungKunci[0].length; j++) {
-                // System.out.print(hasilHitungKunci[i][j]+" ");
                 for (int k = 0; k < angka.length; k++) {
                     if (hasilHitungKunci[i][j].equals(String.valueOf(angka[k]))) {
                         hasilEnkripsi = abjad[k];
@@ -280,6 +262,6 @@ public class Enkripsi_hillchiper {
         }
        
     }
-    
+    //kunci matriks harus sama agar proses deskripsi sesuai.
    
 }
