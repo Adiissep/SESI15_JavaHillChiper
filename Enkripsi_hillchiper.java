@@ -23,7 +23,7 @@ public class Enkripsi_hillchiper {
                              "`", "~", "!", "@", "#", "$", "%", "^", 
                              "&", "*", "(", ")", "_", "-", "+", "=", 
                              "{", "}", "[", "]", "|", "\\", ":", ";", 
-                             "’", ",", ".", "?", "/", " ", ">", "<", "\n"};
+                             "’", ",", ".", "?", "/", " ", ">", "<"};
     static int[] angka = {0, 1, 2, 3, 4,
                           5, 6, 7, 8, 9,
                           10, 11, 12, 13, 14,
@@ -37,8 +37,8 @@ public class Enkripsi_hillchiper {
                           59, 60, 61, 62, 63, 64, 65, 
                           66, 67, 68, 69, 70, 71, 72, 
                           73, 74, 75, 76, 77, 78, 79, 
-                          80, 81, 82, 83, 84, 85};
-    static int modulo = 85;
+                          80, 81, 82, 83, 84};
+    static int modulo = 84;
     static String[]teks2karakter;
     static String hasilKonversi[][];
     static String hasilHitungKunci[][];
